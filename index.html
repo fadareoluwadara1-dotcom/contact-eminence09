@@ -1,583 +1,449 @@
-
-<!DOCTYPE html><!--Declares this document tag HTML5 (the latest version)-->
-
-<html lang="en"><!--This Root Element sets page language to English-->
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!--The first thing is I will add font awesome 6 link. Font awesome 6 gives me the power to create icons on my website-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <!--There are various versions. Font awesome 6 is still one of the latest-->
-  
-  <!--This is an svg favicon. A favicon is a logo that shows the website. It makes it different from other websites. To another user-->
-  <!--Dont write an svg favicon. You can only copy and paste. Ir is complex and very long-->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='100%25' height='100%25'%3E%3C!-- ============================================================ --%3E%3C!-- 1. BASE CANVAS --%3E%3C!-- Full 64x64 container with soft rounded corners (rx=%2214%22) --%3E%3C!-- Fill: Dark Slate / Charcoal Blue (%231E293B) --%3E%3C!-- ============================================================ --%3E%3Crect width='64' height='64' rx='14' fill='%231E293B' /%3E%3C!-- ============================================================ --%3E%3C!-- 2. DOCUMENT BODY --%3E%3C!-- White paper page centered horizontally: --%3E%3C!-- - X: 14 (leaves 14px margins left/right: 14 + 36 + 14 = 64) --%3E%3C!-- - Y: 14 (extends 42px down to Y=56, leaving 8px bottom) --%3E%3C!-- - Rounded corners (rx=%224%22) for a modern app feel --%3E%3C!-- Fill: White (%23FFFFFF) --%3E%3C!-- ============================================================ --%3E%3Crect x='14' y='14' width='36' height='42' rx='4' fill='%23FFFFFF' /%3E%3C!-- ============================================================ --%3E%3C!-- 3. TOP BLUE ACCENT BAR --%3E%3C!-- Custom path covering the top portion of the white paper: --%3E%3C!-- - Starts at left edge (X=14, Y=18) --%3E%3C!-- - Curves top-left corner: 'c0-2.2 1.8-4 4-4' --%3E%3C!-- - Draws top border to X=46: 'h28' --%3E%3C!-- - Curves top-right corner: 'c2.2 0 4 1.8 4 4' --%3E%3C!-- - Drops down 6px vertically: 'v6' --%3E%3C!-- - Closes straight across left: 'H14v-6z' --%3E%3C!-- Fill: Bright Blue (%233B82F6) --%3E%3C!-- ============================================================ --%3E%3Cpath d='M14 18c0-2.2 1.8-4 4-4h28c2.2 0 4 1.8 4 4v6H14v-6z' fill='%233B82F6' /%3E%3C!-- ============================================================ --%3E%3C!-- 4. CLIPBOARD HARDWARE (TOP CENTER) --%3E%3C!-- Outer metallic clip body: --%3E%3C!-- - Centered horizontally (X=24, width 16 -%3E 24 to 40) --%3E%3C!-- - Starts above paper top (Y=9, height 6 -%3E extends to Y=15) --%3E%3C!-- Fill: Cool Grey (%2394A3B8) --%3E%3C!-- ============================================================ --%3E%3Crect x='24' y='9' width='16' height='6' rx='2' fill='%2394A3B8' /%3E%3C!-- Inner grip line / clip detail hole: --%3E%3C!-- - Centered inside clip body (X=27, width 10, Y=11, height 2) --%3E%3C!-- Fill: Very Dark Grey (%230F172A) --%3E%3Crect x='27' y='11' width='10' height='2' rx='1' fill='%230F172A' /%3E%3C!-- ============================================================ --%3E%3C!-- 5. ROW 1: CHECKED ITEM --%3E%3C!-- Checkbox Background Box: --%3E%3C!-- - Position: X=20, Y=27 (7x7 square) --%3E%3C!-- Fill: Blue (%233B82F6) --%3E%3C!-- ============================================================ --%3E%3Crect x='20' y='27' width='7' height='7' rx='1.5' fill='%233B82F6' /%3E%3C!-- Checkmark Graphic: --%3E%3C!-- - Path starts left-middle: M22 30.5 --%3E%3C!-- - Diagonals down to dip point: l1.5 1.5 --%3E%3C!-- - Diagonals up to top right: 3 -3 --%3E%3C!-- Stroke: White (%23FFFFFF), 1.5px thickness, rounded ends --%3E%3Cpath d='M22 30.5l1.5 1.5 3-3' stroke='%23FFFFFF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' fill='none' /%3E%3C!-- Text Line 1 (Simulated text next to checkbox): --%3E%3C!-- - Position: X=30, Y=29.5 (width=14, height=2.5) --%3E%3C!-- Fill: Slate Grey (%2364748B) --%3E%3Crect x='30' y='29.5' width='14' height='2.5' rx='1.25' fill='%2364748B' /%3E%3C!-- ============================================================ --%3E%3C!-- 6. ROW 2: UNCHECKED ITEM --%3E%3C!-- Checkbox Outer Border Only: --%3E%3C!-- - Position: X=20, Y=37 (7x7 square) --%3E%3C!-- Stroke: Grey (%2394A3B8), 1.5px thick, No Fill --%3E%3C!-- ============================================================ --%3E%3Crect x='20' y='37' width='7' height='7' rx='1.5' fill='none' stroke='%2394A3B8' stroke-width='1.5' /%3E%3C!-- Text Line 2: --%3E%3C!-- - Position: X=30, Y=39.5 (width=14, height=2.5) --%3E%3C!-- Fill: Light Grey (%2394A3B8) --%3E%3Crect x='30' y='39.5' width='14' height='2.5' rx='1.25' fill='%2394A3B8' /%3E%3C!-- ============================================================ --%3E%3C!-- 7. ROW 3: INPUT FIELD / BOTTOM TEXT LINE --%3E%3C!-- Long horizontal bar spanning across bottom: --%3E%3C!-- - Position: X=20, Y=48.5 (width=24, height=2.5) --%3E%3C!-- Fill: Very Light Grey (%23CBD5E1) --%3E%3C!-- ============================================================ --%3E%3Crect x='20' y='48.5' width='24' height='2.5' rx='1.25' fill='%23CBD5E1' /%3E%3C/svg%3E">
-<!--It is an svg favicon. You can only copy and paste from AI. Dont attempt writing it.This is the end of the svg favicon.This favicon shows a form logo when loaded-->
-  
-  <title>My Interaction Form</title>
-</head>
-
-<body><!--This is the beginning of the body where I will write all my codes-->
-  
-  <style>/*This is where the CSS codes will be written*/
-    
-    /*Start of Internal CSS*/
-    *{box-sizing:border-box;}/*All elements include padding/ border in their width/height*/
-    
+  <title>Get in touch</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f766e'/%3E%3Cpath d='M16 34l12 12 20-26' stroke='%23fff' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <style>
+    :root{
+      --bg:#f2f4f3; --surface:#ffffff; --ink:#17211f; --muted:#5b6865;
+      --line:#d9dfdd; --accent:#0f766e; --accent-dark:#0b5a54;
+      --accent-soft:#e3f2f0; --error:#b42318; --focus:#f59e0b;
+      --on-accent:#ffffff;
+    }
+    @media (prefers-color-scheme:dark){
+      :root{
+        --bg:#111715; --surface:#1a2320; --ink:#eaf0ee; --muted:#9bacA7;
+        --line:#2c3a36; --accent:#2dd4bf; --accent-dark:#5eead4;
+        --accent-soft:#12312d; --error:#f97066; --on-accent:#07201c;
+      }
+    }
+    *{box-sizing:border-box}
+    html{-webkit-text-size-adjust:100%}
     body{
-      font-family:Arial,Helvetica,sans-serif;
-       background:#1e1e24;/*Dark background*/
-      margin:0;/*To remove default Margin*/
-      padding:40px 20px;/*40px for the top and bottom. 20px for left and right*/
-      display:flex;/*Turns the entire body to a flex container*/
-      flex-direction:column;/*Stacks children vertically*/
-      align-items:center;/*Centers children horizontally*/
-      gap:30px;/*Adds 30px space between Children*/
+      margin:0; min-height:100vh; background:var(--bg); color:var(--ink);
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+      line-height:1.5;
     }
-    .forms-wrap{
-      display:flex;/*lays out the forms two of them side by side*/
-      align-items:flex-start;/*Aligns forms to the top*/
-      flex-wrap:wrap;/*Allows form to wrap to a new line on small screens*/
-      justify-content:center;/*centers the form horizontally*/
-    }
-    form{
-      width:260px;/*Fixed width for each form*/
-      padding:20px;/*inner spacing inside each form*/
-      border-radius:10px;/*Rounded corners*/
-      display:flex;/*flex container for form fields*/
-      flex-direction:column;/*Stacks fields vertically*/
-      gap:12px;/*Space between fields*/
-    }
-    #form1{
-      background:#2b5fd9;/*Blue background for Form 1*/
-    }
-    #form2{
-      background:#e8c93a;/*Yellow background*/
-    }
-    form h2{
-      margin:0 0 6px;color:#fff;
-      font-size:18px;/*My Default color will be white (#fff)*/
-    }
-      #form h2{
-      color:#2b2b00;
-    }/*changes the form color to dark. It dominates white*/
-    
-    label{color:#fff;font-size:13px}
-    
-    input{
-      width:100%;/*Input must fill width of the container*/
-      padding:8px;/*Inner spacing inside input*/
-      border-radius:6px;/*Rounded corners on input*/
-      border:none;
-      font-size:14px;/*Text size inside input*/
-    }
-    input:disabled{background:#fff;color:#333;}
-    
-    button{
-      margin-top:8px;
-      padding:10px;
-      border:none;
-      border-radius:6px;
-      font-weight:bold;
-      cursor:pointer;
-    }
-    .final-wrap{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      gap:10px;
-    }
-    #finalSubmit{
-      background:#444;
-      color:#fff;
-      padding:14px 30px;
-      font-size:15px;
-      border-radius:8px;
-    }
-    #finalSubmit:disabled{
-      background:#333;
-      opacity:0.5;
-      cursor:not-allowed;
-    }
-    #status{
-      color:#ddd;font-size:14px;text-align:center;
-    }
-    #result{
-      color:#9f9;/*light green text, looks like console output*/
-      font-size:14px;
-      white-space:pre-wrap;/*Preserves line break/ spacing for JSON Stringify*/
-      text-align:center;/*Centers the result text*/
-    }
-    
-    
-    /*This is for the font awesome 6 icon*/
-    .icon-bar{
-      display:flex;/*This sets my icon display setting*/
-      align-items:center;/*I want their position to be centralized*/
-      gap:10px;/*Let There be 10 pixels gap between them*/
-      font-size:20px;/*I want my icon to be 20pixels small*/
-    }
-    /*Font awesome 6 icon is closed here*/
-    
-    /*Sidebar will be added here*/
-    .sidenav{
-      height:100%;/*Sidenav takes the full height of the screen*/
-      width:0;/*The Sidenav is closed - Zero width unless opened by my JavaScript*/
-      position:fixed;/*Stay in place always. Dont move*/
-      z-index:1;/*Sits above other page content*/
-      top:0;/*Stay at the top*/
-      left:0;/*Stick to the left edge of the screen*/
-      background-color:#e8c93a;
-      overflow-x:hidden;/*Hides horizontal overflow while width is animating*/
-      transition:0.5s;/*Animates width smoothly*/
-      padding-top:60px;/*pushes menu items from the top*/
-      text-align:center;/*Centers menu items horizontally*/
-    }
-    
-    .sidenav button.navbtn{
-      padding:8px 8px 32px;/*Inner spacing for each nav button, extra space on the left*/
-      text-decoration:none;
-      /*Removes underline*/
-      font-size:25px;/*Size of the button text*/
-      color:#818181;
-      display:block;/*Makes each button take its own line*/
-      width:100%;/*Button stretches to fill the sidenav width*/
-      background:none;/*Remove default background*/
-      border:none;/*No border please*/
-      text-align:center;/*Centralize the text*/
-      cursor:pointer;/*shows a pointer cursor on hover to indicate it is clickable*/
-    font-family:inherit;/*make the button use the same font I emphasize in body*/
-    transition:0.3;/*Animates color changes smoothly*/
-    }
-    .sidenav button.navbtn:active{
-      color:#f1f1f1;/*lightens text color once tapped*/
-    }
-    .sidenav .closebtn{
-      position:absolute;/*positions the close button relative to the sidenav*/
-      top:0;/*stay at the top of the sidenav*/
-      right:25px;/*Offsete to the right edge*/
-      font-size:36px;/*large font size to the close icon*/
-      margin-left:50px;/*Extra-left margin*/
-      border:none;/*Remove default button background*/
-      color:#818181;/*Default grey color*/
-      cursor:pointer;/*Showing pointer cursor on active*/
-    }
-    .sidenav .closebtn:hover{
-      color:#f1f1f1;/*lightens the close button*/
-    }
-    
-    
-    
-    @media screen and (max-height:450px){/*Applies these rules only when the screen height is small*/
-      .sidenav{padding-top:15px;}/*If i am using a phone for my website. It reduces the top padding so that menu items fit into the screens*/
-      .sidenav button.navbtn{font-size:18px;}
-      /*Shrinks button text so more items fit*/
-      
-      /*the rule ends here*/
-    }
-    /*the rule is closed here*/
-    
-    .pages{
-      display:none;/*Hide all page section  by default*/
-      padding:40px 20px;/*Space around page content*/
-    }
-    .pages.active{
-      display:block;/*shows only the page that i am currently on*/
-    }
-    
-    .backbtn{
-      display:none;/*Back button is hidden by default*/
-      margin-bottom:20px;/*Space below the button and the page content starts*/
-      padding:8px 16px;/*Inner Space inside the button*/
-      font-size:16px;/*Text size for the button label*/
-      cursor:pointer;/*shows pointer cursor on hover*/
-      border:none;/*Removes default border*/
-      border-radius:4px;/*Rounds the button corners*/
-      background-color:#e8c93a;
-      color:#f1f1f1;
-      font-family:inherit;
-    }
-    .backbtn.show{
-      display:inline-block;
-      /*Reveals the back button when this class is addressed by JavaScript*/
-    }
-    
-    
-    /*Closing the Sidebar*/
-    .allpages{
-      color:#e8c93a;
-      background-color:#2b5fd9;
-    }
-    /*The css codes ends here*/
 
+    /* ---------- Top bar ---------- */
+    .topbar{
+      position:sticky; top:0; z-index:10;
+      display:flex; align-items:center; gap:12px;
+      padding:12px 20px; background:var(--surface);
+      border-bottom:1px solid var(--line);
+    }
+    .menu-btn{
+      display:flex; align-items:center; justify-content:center;
+      width:42px; height:42px; background:transparent; color:var(--ink);
+      border:1px solid var(--line); border-radius:8px; cursor:pointer;
+    }
+    .menu-btn:hover{background:var(--bg)}
+    .brand{font-weight:700; letter-spacing:-0.01em}
 
-    .icon-bar{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-size:20px;
-  flex-wrap:wrap;      /* let icons wrap to a new line instead of overflowing */
-  max-width:100%;      /* stay inside the form's padding box */
-  justify-content:center;
-}
-    /*As copied from AI*/
-    /*But Understood*/
+    /* ---------- Sidebar ---------- */
+    .overlay{
+      position:fixed; inset:0; background:rgba(0,0,0,.45);
+      opacity:0; pointer-events:none; transition:opacity .25s; z-index:20;
+    }
+    .overlay.open{opacity:1; pointer-events:auto}
+    .sidebar{
+      position:fixed; top:0; left:0; bottom:0; width:270px; max-width:85vw;
+      background:var(--surface); border-right:1px solid var(--line);
+      transform:translateX(-100%); visibility:hidden;
+      transition:transform .25s, visibility .25s;
+      z-index:30; display:flex; flex-direction:column; padding:16px;
+    }
+    .sidebar.open{transform:translateX(0); visibility:visible}
+    .side-head{
+      display:flex; align-items:center; justify-content:space-between;
+      margin-bottom:12px; padding:4px 4px 12px; border-bottom:1px solid var(--line);
+    }
+    .close-btn{
+      width:38px; height:38px; background:transparent; color:var(--ink);
+      border:none; border-radius:8px; cursor:pointer; font-size:22px; line-height:1;
+    }
+    .close-btn:hover{background:var(--bg)}
+    .nav{display:flex; flex-direction:column; gap:4px}
+    .nav button{
+      text-align:left; font:inherit; font-size:1rem; color:var(--ink);
+      background:transparent; border:none; border-radius:8px;
+      padding:12px 14px; cursor:pointer;
+    }
+    .nav button:hover{background:var(--bg)}
+    .nav button[aria-current="page"]{
+      background:var(--accent-soft); color:var(--accent-dark); font-weight:600;
+    }
+
+    /* ---------- Pages ---------- */
+    main{max-width:900px; margin:0 auto; padding:40px 20px 64px}
+    .page[hidden]{display:none}
+    h1{font-size:clamp(1.75rem,4vw,2.4rem); line-height:1.15; margin:0 0 8px; letter-spacing:-0.02em}
+    .lead{margin:0 0 28px; color:var(--muted); max-width:56ch}
+    .prose{max-width:62ch}
+    .prose p{margin:0 0 14px}
+    .faq{border:1px solid var(--line); border-radius:10px; background:var(--surface); margin-bottom:10px}
+    .faq summary{cursor:pointer; padding:14px 16px; font-weight:600}
+    .faq p{margin:0; padding:0 16px 16px; color:var(--muted)}
+
+    /* ---------- Progress ---------- */
+    .progress{display:flex; gap:8px; margin:0 0 24px; padding:0; list-style:none; font-size:.875rem; color:var(--muted)}
+    .progress li{flex:1; padding-top:10px; border-top:3px solid var(--line); transition:border-color .25s,color .25s}
+    .progress li.done{border-color:var(--accent); color:var(--ink)}
+
+    /* ---------- Forms ---------- */
+    .forms{display:grid; grid-template-columns:1fr 1fr; gap:20px; align-items:start}
+    @media (max-width:700px){.forms{grid-template-columns:1fr}}
+    form.card{
+      background:var(--surface); border:1px solid var(--line); border-radius:12px;
+      padding:24px; display:flex; flex-direction:column; gap:16px;
+      transition:border-color .25s, box-shadow .25s;
+    }
+    form.card.locked{border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-soft)}
+    .card-head{display:flex; justify-content:space-between; align-items:center; gap:12px}
+    .card h2{margin:0; font-size:1.125rem}
+    .badge{display:none; font-size:.8125rem; font-weight:600; color:var(--accent-dark); background:var(--accent-soft); padding:3px 10px; border-radius:999px}
+    .locked .badge{display:inline-block}
+    .field{display:flex; flex-direction:column; gap:6px}
+    label{font-size:.875rem; font-weight:600}
+    input,textarea{
+      width:100%; font:inherit; color:var(--ink); background:var(--bg);
+      border:1px solid var(--line); border-radius:8px; padding:11px 12px;
+    }
+    textarea{resize:vertical; min-height:132px}
+    input::placeholder,textarea::placeholder{color:var(--muted); opacity:.8}
+    input:disabled,textarea:disabled{opacity:.75; cursor:not-allowed}
+    input.invalid,textarea.invalid{border-color:var(--error)}
+    .err{font-size:.8125rem; color:var(--error); min-height:1.1em}
+    .count{font-size:.8125rem; color:var(--muted); text-align:right}
+
+    .btn{font:inherit; font-weight:600; border-radius:8px; cursor:pointer}
+    .btn-primary{background:var(--accent); color:var(--on-accent); border:none; padding:12px 16px}
+    .btn-primary:hover{background:var(--accent-dark)}
+    .btn-secondary{background:transparent; color:var(--ink); border:1px solid var(--line); padding:11px 16px}
+    .btn-secondary:hover{background:var(--bg)}
+    .hidden{display:none !important}
+    :focus-visible{outline:3px solid var(--focus); outline-offset:2px}
+
+    .final{margin-top:28px; display:flex; flex-direction:column; align-items:center; gap:12px; text-align:center}
+    #finalSubmit{padding:14px 36px; font-size:1rem; min-width:220px}
+    #finalSubmit:disabled{background:var(--line); color:var(--muted); cursor:not-allowed}
+    #statusMsg{font-size:.9375rem; color:var(--muted); min-height:1.4em}
+    #statusMsg.ok{color:var(--accent-dark); font-weight:600}
+    #statusMsg.fail{color:var(--error); font-weight:600}
+
+    /* ---------- Sent summary ---------- */
+    .sent{
+      width:100%; max-width:560px; text-align:left;
+      background:var(--surface); border:1px solid var(--accent);
+      border-radius:12px; padding:20px; box-shadow:0 0 0 3px var(--accent-soft);
+    }
+    .sent h3{margin:0 0 12px; font-size:1rem; color:var(--accent-dark)}
+    .sent dl{margin:0}
+    .sent dt{font-size:.8125rem; color:var(--muted); margin-top:10px}
+    .sent dd{margin:2px 0 0; white-space:pre-wrap; overflow-wrap:anywhere}
+
+    /* ---------- Success panel ---------- */
+    .success{
+      background:var(--surface); border:1px solid var(--accent);
+      box-shadow:0 0 0 3px var(--accent-soft); border-radius:12px;
+      padding:40px 24px; text-align:center;
+      display:flex; flex-direction:column; align-items:center; gap:12px;
+    }
+    .success h2{margin:0; font-size:1.5rem}
+    .success p{margin:0 0 8px; color:var(--muted); max-width:44ch}
+    .success-icon{
+      width:56px; height:56px; border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      background:var(--accent); color:var(--on-accent); font-size:24px;
+    }
+
+    /* ---------- Footer + social icons ---------- */
+    .site-footer{
+      max-width:900px; margin:0 auto; padding:32px 20px 48px;
+      border-top:1px solid var(--line);
+      display:flex; flex-direction:column; align-items:center; gap:16px; text-align:center;
+    }
+    .site-footer p{margin:0; font-size:.875rem; color:var(--muted)}
+    .social{display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin:0; padding:0; list-style:none}
+    .social a{
+      display:flex; align-items:center; justify-content:center;
+      width:44px; height:44px; border-radius:50%;
+      background:var(--surface); color:var(--muted);
+      border:1px solid var(--line); font-size:18px; text-decoration:none;
+      transition:background .2s, color .2s, border-color .2s;
+    }
+    .social a:hover{background:var(--accent); color:var(--on-accent); border-color:var(--accent)}
+
+    @media (prefers-reduced-motion:reduce){*{transition:none !important}}
   </style>
-  
-  <!--I want to put my sidebar here-->
-  <div id="mySidenav"  class="sidenav"><!--Container for the sliding navigation menu-->
-    <button class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></button><!--Button that closes the sidenav. It is an X symbol-->
-    
+</head>
+<body>
 
-    <button class="navbtn" data-page="about" onclick="showPage('about')">About</button>
-    <!--Navigation button for the About Page-->
-    
-    <button class="navbtn" data-page="FAQs" onclick="showPage('FAQs')">FAQs</button>
-    <!--Nav button for my FAQs page-->
-    
-    <button class="navbtn" data-page="Reviews" onclick="showPage('Reviews')">Reviews</button>
-    
-    <button class="navbtn" data-page="Expertise" onclick="showPage('Expertise')">Expertise</button>
-    
-    <button class="navbtn" data-page="Niche" onclick="showPage('Niche')">Niche</button>
+  <!-- Top bar -->
+  <div class="topbar">
+    <button class="menu-btn" id="openMenu" type="button" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <span class="brand">Get in touch</span>
   </div>
-  <!--End of the Sidebar-->
 
-    <!--I want to add my Open sidebar button here-->
-    <span id="openBtnBar" style="font-size:30px;cursor:pointer;color:#e8c93a;" onclick="openNav()"><i class="fa-solid fa-bars"></i> Open</span>
-    <!--I added an id to span-->
-    
-    <!--and have it closed here-->
-    
-
-
-<button id="backBtn" class="backbtn" onclick="showPage('home')"><i class="fa-solid fa-arrow-left"></i> Back</button>
-<!--This Back button returns to the homepage; hidden until a subpage is opened.-->
-<div id="home" class="pages active"><!--This is the home section. It must cover my Form, to remain RELEVANT-->
-  
-
-
-  <!--I will close it Here-->
-  
-  
-  <section><!--HTML starts here-->
-    
-    <div class="forms-wrap"><!--A wrapper that holds both forms side by side-->
-      <form id="form1"><!--First form identification as form1-->
-        <h2>Your details:</h2><!--Heading for Form1-->
-        <label>Name</label><!--Label for the name field-->
-        <input type="text" id="f1-name" placeholder="Name" required>
-        <!--Text input for Form 1's name,required to be filed-->
-        
-        <label>Email</label><!--label for the email fields-->
-        <input type="email" id="f1-email" placeholder="Email" required>
-        <!--Email input for form 1 required and validated as email before submitted-->
-        
-        <button type="submit">Submit</button>
-        <!--Submit button that 'locks' form1 instead of sending the data to the form action-->
-      </form>
-      
-      <form id="form2"><!--Second form identification as form2-->
-      <h2>Communicate:</h2><!--Heading for form 2-->
-      <label for="user-message">Message</label>
-      <textarea id="f2-message" name="message" rows="5" placeholder="Type in your message for me and I will get to it promptly" required></textarea>
-        <button type="submit">Submit 2</button>
-        
-          <!--It should be Under Form 2 submit button-->
-    <div class="icon-bar">
-      
-      <a href="https://www.facebook.com/share/1EZ7S4cqM9/" aria-label="Facebook" target="_blank" style="color:blue;"><i class="fa-brands fa-facebook"></i></a>
-      
-     <a href="tel:+2349162461130" aria-label="Phone" target="_blank" style="color:green;"><i class="fa-solid fa-phone"></i></a>
-     
-<a href="https://www.reddit.com/u/Slight_codesmith_560/s/FZyRd5c0T7" aria-label="Reddit" target="_blank" style="color:red;"><i class="fa-brands fa-reddit"></i></a>
-
-<a href="https://www.image2url.com/r2/default/images/1787943441951-7b57db2a-300a-4187-a32a-d3b0a652a9d7.jpg" aria-label="image" target="_blank" style="color:black;"><i class="fa-solid fa-image"></i></a>
-
-<a href="#" aria-label="TikTok" target="_blank" style="color:black;"><i class="fa-brands fa-tiktok"></i></a>
-
-<a href="https://www.instagram.com/ayomide12345517?igsi=eGc1c3pxcGMzNXI3" aria-label="Instagram" target="_blank" style="color:red;"><i class="fa-brands fa-instagram"></i></a>
-
-<a href="https://www.linkedin.com/in/darasimi-fadare-45779a433?utm_source=share_via&utm_content=profile&utm_medium=member_android" aria-label="linkedin" target="_blank" style="background-color:hwb(240 57% 2%);padding:1px;border-radius:5px;color:white;"><i class="fa-brands fa-linkedin"></i></a>
-
-<a href="mailto:fadareoluwadara1@gmail.com" aria-label="Email" target="_blank" style="color:green;"><i class="fa-solid fa-envelope"></i></a>
-
-      <a href="https://youtube.com/@eminenceprojects8?si=5UG4XuYIR8DG34El" aria-label="YouTube" target="_blank" style="color:white;"><i class="fa-brands fa-youtube"></i></a>
-
-      <a href="https://thejohndoe-files.netlify.app/" aria-label="PDF Library" target="_blank" style="color:black;"><i class="fa-regular fa-file-pdf"></i></a>
-
-
-<!--Linkedin icon was outside the rest before. TAKE NOTE. I just fixed it-->
-
+  <!-- Sidebar -->
+  <div class="overlay" id="overlay"></div>
+  <nav class="sidebar" id="sidebar" aria-label="Main menu">
+    <div class="side-head">
+      <strong>Menu</strong>
+      <button class="close-btn" id="closeMenu" type="button" aria-label="Close menu">&times;</button>
     </div>
-    
-</div>
-    <!--I will put it here-->
-      
-      </form><!--End of form2-->
-    </div><!--End of form wrap-->
-    
-    
-    <div class="final-wrap"><!--A Division for the final submit controls-->
-    <button id="finalSubmit" disabled>Submit both Form</button>
-      <!--Final submit button, starts disabled until both forms are locked-->
-      
-      <div id="status">Lock form 1 and form 2 to ensure final Submit.</div>
-      <!--Status message is shown to the User and updated by Javascript-->
-      
-      <div id="result"></div><!--Empty container where the final JSON result will be displayed-->
-      
-    </div><!--End of final-wrap-->
-    
-    <form id="postForm" action="https://formspree.io/f/xkjnwqee" method="POST" style="display:none;"><!--This is the most important part of the form. Without it, the form will send nothing.action=" " indicates where the info will be sent. Method="POST" posts our message display:none; hides it from public view-->
-      
-      <input type="hidden" 
-      name="form1-name" id="post-f1-name">
-      <!--It will hold Form 1 name values when submitted-->
-      
-      <input type="hidden"
-      name="form1-email" id="post-f1-email">
-      <!--It will hold Form 1 email value when submitted-->
-      
-      <input type="hidden"
-      name="message" id="post-Message">
-      <!--It will hold form2 message value when submitted-->
-    </form>
-    
-    <!--HTML ends here-->
-  </section>
-  
-  
-  </div><!--This div indicates where the home page ends. The navigation must be outside the home page.-->
-  
-  <div class="allpages">
-  <div id="about" class="pages">
-    <h1>About</h1>
-    <p>This is the form site of eminenceprojects8</p>
-    <p>It belongs to a University Student, Dara Fadare,  of the Faculty of Computing and Infomatics,LAUTECH.</p>
-    <p>EminenceProjects8 builds custom websites that give professionals a strong digclass=""ital identity, enhance their professionalism, and establish authority.
-Your expertise deserves to look the part.
-📩 DM us to build yours. </p>
-  </div>
-    <div id="FAQs" class="pages">
-    <h1>FAQs</h1>
-    <p>EminenceProjects8 — Company FAQs</p>
+    <div class="nav">
+      <button type="button" data-page="home" aria-current="page">Home</button>
+      <button type="button" data-page="about">About</button>
+      <button type="button" data-page="faqs">FAQs</button>
+      <button type="button" data-page="reviews">Reviews</button>
+    </div>
+  </nav>
 
-<p>1. What do I need a website for?
-So potential clients can see who you are, what you do, and trust your expertise.</p>
+  <main>
+    <!-- HOME: the two forms -->
+    <section id="page-home" class="page">
+      <h1>Get in touch</h1>
+      <p class="lead">Complete both steps below, then send.</p>
 
-<p>2. How much does a website cost?
-Pricing depends on the project. DM us for a custom quote.</p>
+      <div id="formArea">
+      <ol class="progress" aria-label="Progress">
+        <li id="step1">1. Your details</li>
+        <li id="step2">2. Your message</li>
+        <li id="step3">3. Send</li>
+      </ol>
 
-<p>3. How long does it take to build a website?
-It depends on the project, its requirements, and its complexity.</p>
+      <div class="forms">
+        <form id="form1" class="card" novalidate>
+          <div class="card-head"><h2>Your details</h2><span class="badge">Saved</span></div>
+          <div class="field">
+            <label for="f1-name">Full name</label>
+            <input type="text" id="f1-name" autocomplete="name" placeholder="Jane Doe">
+            <div class="err" id="f1-name-err"></div>
+          </div>
+          <div class="field">
+            <label for="f1-email">Email address</label>
+            <input type="email" id="f1-email" autocomplete="email" placeholder="jane@example.com">
+            <div class="err" id="f1-email-err"></div>
+          </div>
+          <button type="submit" class="btn btn-primary" id="save1">Save details</button>
+          <button type="button" class="btn btn-secondary hidden" id="edit1">Edit details</button>
+        </form>
 
-<p>4. Do you build custom websites?
-Yes. Every website is built from scratch around your professional identity.</p>
+        <form id="form2" class="card" novalidate>
+          <div class="card-head"><h2>Your message</h2><span class="badge">Saved</span></div>
+          <div class="field">
+            <label for="f2-message">Message</label>
+            <textarea id="f2-message" maxlength="1000" placeholder="How can we help?"></textarea>
+            <div class="count"><span id="charCount">0</span>/1000</div>
+            <div class="err" id="f2-message-err"></div>
+          </div>
+          <button type="submit" class="btn btn-primary" id="save2">Save message</button>
+          <button type="button" class="btn btn-secondary hidden" id="edit2">Edit message</button>
+        </form>
+      </div>
 
-<p>5. What technologies do you use?
-We build with HTML, CSS, and JavaScript.</p>
+      <div class="final">
+        <button id="finalSubmit" class="btn btn-primary" type="button" disabled>Send message</button>
+        <div id="statusMsg" role="status" aria-live="polite">Save both forms to enable sending.</div>
+      </div>
+      </div>
 
-<p>6. Do you provide website maintenance?
-Yes. We provide ongoing maintenance and updates to keep your website running smoothly.</p>
+      <div id="successPanel" class="success hidden" role="status" aria-live="polite">
+        <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+        <h2>Message sent</h2>
+        <p>Your message was sent to Formspree. We will reply to your email address.</p>
+        <button type="button" class="btn btn-primary" id="sendAnother">Send another message</button>
+      </div>
+    </section>
 
-<p>7. What makes EminenceProjects8 different?
-Every website is custom-built around you, your professional identity, and your goals.</p>
-  </div>
-    <div id="Reviews" class="pages">
-    <h1>Reviews</h1>
-    <p>EminenceProjects8 — Reviews & Testimonials</p>
+    <!-- ABOUT -->
+    <section id="page-about" class="page" hidden>
+      <h1>About</h1>
+      <p class="lead">Replace this text with a short introduction.</p>
+      <div class="prose">
+        <p>Use this page to say who you are, what you do, and who you help.</p>
+        <p>Keep it to two or three short paragraphs.</p>
+      </div>
+    </section>
 
-<p>Our Founding Promise</p>
-<div></div>
-<p>We build websites that represent who you are professionally—clearly, confidently, and authentically.</p>
+    <!-- FAQS -->
+    <section id="page-faqs" class="page" hidden>
+      <h1>FAQs</h1>
+      <p class="lead">Answers to common questions.</p>
+      <details class="faq"><summary>How do I contact you?</summary><p>Use the form on the Home page. Save your details and message, then send.</p></details>
+      <details class="faq"><summary>What happens after I send a message?</summary><p>Your message is delivered to us and we reply by email.</p></details>
+      <details class="faq"><summary>Can I edit my message before sending?</summary><p>Yes. Use the Edit button on either form before you send.</p></details>
+    </section>
 
-<p>What You Can Expect</p>
+    <!-- REVIEWS -->
+    <section id="page-reviews" class="page" hidden>
+      <h1>Reviews</h1>
+      <p class="lead">Customer feedback will appear here.</p>
+      <div class="prose"><p>Add real reviews from your customers on this page.</p></div>
+    </section>
+  </main>
 
-<p>Custom-Built
-Every website is built from scratch around your professional identity.</p>
+  <footer class="site-footer">
+    <p>Connect with us</p>
+    <ul class="social">
+      <li><a href="mailto:fadareoluwadara1@gmail.com" aria-label="Email" title="Email"><i class="fa-solid fa-envelope"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/darasimi-fadare-45779a433" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+      <li><a href="https://instagram.com/onemoreday101?rpxt=eGc1c3pxcGMzNXI3" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+      <li><a href="https://www.facebook.com/share/1EsLcAbhxx/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+      <li><a href="https://vm.tiktok.com/ZS9DndPLDxNja-zUMhl/" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+      <li><a href="https://thejohndoe-files.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="PDF Library" title="PDF Library"><i class="fa-regular fa-file-pdf"></i></a></li>
+    </ul>
+  </footer>
 
-<p>Authority-Focused
-We design with credibility and professional authority in mind.</p>
+  <script>
+    var FORM_ENDPOINT = "https://formspree.io/f/xkjnwqee";
 
-<p>Clean & Modern
-Simple, polished designs that make your expertise stand out.</p>
+    function byId(id){ return document.getElementById(id); }
 
-<p>---</p>
+    /* ---------- Sidebar + pages ---------- */
+    var sidebar = byId("sidebar"), overlay = byId("overlay"), openBtn = byId("openMenu");
 
-<p>Sample Testimonials</p>
+    function openNav(){
+      sidebar.classList.add("open");
+      overlay.classList.add("open");
+      openBtn.setAttribute("aria-expanded","true");
+    }
+    function closeNav(){
+      sidebar.classList.remove("open");
+      overlay.classList.remove("open");
+      openBtn.setAttribute("aria-expanded","false");
+    }
+    function showPage(name){
+      var pages = document.querySelectorAll(".page");
+      for (var i = 0; i < pages.length; i++){
+        pages[i].hidden = (pages[i].id !== "page-" + name);
+      }
+      var btns = document.querySelectorAll(".nav button");
+      for (var j = 0; j < btns.length; j++){
+        if (btns[j].getAttribute("data-page") === name) btns[j].setAttribute("aria-current","page");
+        else btns[j].removeAttribute("aria-current");
+      }
+      closeNav();
+      window.scrollTo(0,0);
+    }
 
-<p>Demo testimonials — to be replaced with genuine client reviews as they come in.</p>
+    openBtn.addEventListener("click", openNav);
+    byId("closeMenu").addEventListener("click", closeNav);
+    overlay.addEventListener("click", closeNav);
+    document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeNav(); });
+    var navBtns = document.querySelectorAll(".nav button");
+    for (var n = 0; n < navBtns.length; n++){
+      navBtns[n].addEventListener("click", function(){ showPage(this.getAttribute("data-page")); });
+    }
 
-<p>Architect</p>
+    /* ---------- Forms ---------- */
+    var nameInput = byId("f1-name"), emailInput = byId("f1-email"), msgInput = byId("f2-message");
+    var statusEl = byId("statusMsg"), finalBtn = byId("finalSubmit");
+    var saved = { form1:false, form2:false };
 
-<p>«“They understood the kind of professional image I wanted and turned it into a website that actually felt like me.”»</p>
+    function setError(input, errId, text){
+      byId(errId).textContent = text;
+      if (text) input.classList.add("invalid"); else input.classList.remove("invalid");
+    }
 
-<p>Consultant</p>
+    function refresh(){
+      byId("step1").classList.toggle("done", saved.form1);
+      byId("step2").classList.toggle("done", saved.form2);
+      var both = saved.form1 && saved.form2;
+      finalBtn.disabled = !both;
+      statusEl.className = "";
+      statusEl.textContent = both ? "Everything looks good. Ready to send." : "Save both forms to enable sending.";
+    }
 
-<p>«“I wanted something professional without being complicated. The result was clean, modern, and exactly what I needed.”»</p>
+    function lockForm(formId, fields, saveId, editId, key){
+      byId(formId).classList.add("locked");
+      for (var i = 0; i < fields.length; i++) fields[i].disabled = true;
+      byId(saveId).classList.add("hidden");
+      byId(editId).classList.remove("hidden");
+      saved[key] = true;
+      refresh();
+    }
+    function unlockForm(formId, fields, saveId, editId, key){
+      byId(formId).classList.remove("locked");
+      for (var i = 0; i < fields.length; i++) fields[i].disabled = false;
+      byId(saveId).classList.remove("hidden");
+      byId(editId).classList.add("hidden");
+      saved[key] = false;
+      refresh();
+      fields[0].focus();
+    }
 
-<p>Creative Professional</p>
+    byId("form1").addEventListener("submit", function(e){
+      e.preventDefault();
+      var ok = true;
+      if (nameInput.value.trim().length < 2){ setError(nameInput,"f1-name-err","Enter your full name."); ok = false; }
+      else setError(nameInput,"f1-name-err","");
+      var em = emailInput.value.trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){ setError(emailInput,"f1-email-err","Enter a valid email address."); ok = false; }
+      else setError(emailInput,"f1-email-err","");
+      if (ok) lockForm("form1",[nameInput,emailInput],"save1","edit1","form1");
+    });
 
-<p>«“I really liked how the website reflected my identity instead of looking like a generic template.”»</p>
-  </div>
-    <div id="Expertise" class="pages">
-    <h1>Expertise</h1>
-    <p>Subject Matter Expertise</p>
+    byId("form2").addEventListener("submit", function(e){
+      e.preventDefault();
+      if (msgInput.value.trim().length < 10){
+        setError(msgInput,"f2-message-err","Write at least 10 characters.");
+        return;
+      }
+      setError(msgInput,"f2-message-err","");
+      lockForm("form2",[msgInput],"save2","edit2","form2");
+    });
 
-<p>Custom Website Design & Development</p>
+    byId("edit1").addEventListener("click", function(){ unlockForm("form1",[nameInput,emailInput],"save1","edit1","form1"); });
+    byId("edit2").addEventListener("click", function(){ unlockForm("form2",[msgInput],"save2","edit2","form2"); });
+    msgInput.addEventListener("input", function(){ byId("charCount").textContent = msgInput.value.length; });
 
-<p>EminenceProjects8 specializes in creating professional, credible portfolio websites using HTML, CSS, and JavaScript.</p>
+    function resetAll(){
+      nameInput.value = ""; emailInput.value = ""; msgInput.value = "";
+      byId("charCount").textContent = "0";
+      unlockForm("form1",[nameInput,emailInput],"save1","edit1","form1");
+      unlockForm("form2",[msgInput],"save2","edit2","form2");
+    }
 
-<p>Our expertise is focused on helping professionals establish a strong digital identity through clean, modern, custom-built websites.</p>
-  </div>
-    <div id="Niche" class="pages">
-    <h1>Niche</h1>
-    
-    <p>Niche / Vertical — Specific How-Tos</p>
+    finalBtn.addEventListener("click", function(){
+      if (!(saved.form1 && saved.form2)) return;
+      finalBtn.disabled = true;
+      statusEl.className = "";
+      statusEl.textContent = "Sending...";
 
-<p>Helping professionals improve their existing websites to better establish and communicate their professional identity.</p>
+      var data = new FormData();
+      data.append("form1-name", nameInput.value.trim());
+      data.append("form1-email", emailInput.value.trim());
+      data.append("message", msgInput.value.trim());
 
-<p>Our how-to content focuses on website structure, presentation, and professional positioning—showing professionals how to turn a basic website into a stronger representation of who they are and what they do.</p>
-    
-  </div>
-  
-  </div>
-  
-  <script>//JavaScript starts here
-    const form1=document.getElementById('form1');
-    //Reference to the form 1 Element
-    
-    const form2= document.getElementById('form2');
-//Reference to the form 2 Element
+      fetch(FORM_ENDPOINT, { method:"POST", body:data, headers:{ "Accept":"application/json" } })
+        .then(function(res){
+          if (!res.ok) throw new Error("Request failed");
+          resetAll();
+          byId("formArea").classList.add("hidden");
+          byId("successPanel").classList.remove("hidden");
+          window.scrollTo(0,0);
+        })
+        .catch(function(){
+          statusEl.className = "fail";
+          statusEl.textContent = "Could not send. Check your connection and try again.";
+          finalBtn.disabled = false;
+        });
+    });
 
-const finalSubmit=document.getElementById('finalSubmit');
-//Reference to the final Submit button
+    byId("sendAnother").addEventListener("click", function(){
+      byId("successPanel").classList.add("hidden");
+      byId("formArea").classList.remove("hidden");
+      refresh();
+    });
 
-const status=document.getElementById('status');
-//Reference to the status text element.
-
-const result=document.getElementById('result');
-//reference to the result displaying element.
-
-let form1Locked=false;//Tracks whether form 1 has been locked/ submitted.
-
-let form2Locked=false;//Tracks whether Form 2 has been locked/submitted
-
-function lockForm(form){//This JavaScript function disables all inputs and button inside a given form
-
-  form.querySelectorAll('input').forEach(i=>i.disabled=true);
-  //Disables every input field in the form
-  
-  form.querySelector('button').disabled=true;//Disables the form's submit button
-}//the JavaScript function ends here
-
-function updateStatus(){//This is the function to change the status message upon final submit button state
-  if (form1Locked&&form2Locked){//if both forms are locked
-finalSubmit.disabled=false;//Enable the final submit button
-status.textContent='Both forms are locked. Waiting for final submit';//It updates the status message
-}else{//if at least one form is still unlocked
-//I sense an error here
-  status.textContent = `Waiting: ${!form1Locked?'Form1':''}${!form1Locked&&!form2Locked?' and ':''}${!form2Locked?'Form2':''}`.trim();
-    //Builds a message listing which form(s) are still not locked, trim extra whitespace
-    
-  }
-  //Error debugged with Claude
-}
-form1.addEventListener('submit',e=>{//listens for Form 1's submit event
-e.preventDefault();//prevents the default page reload on submit
-
-lockForm(form1);//Disables Form 1's input and button
-form1Locked=true;//Marks Form1 as locked
-  updateStatus();//Refreshes the status display and final button state.
-  });//if statement ends here
-
-form2.addEventListener('submit',e=>{//listens for Form 2's submit event
-e.preventDefault();//prevents the default page reload on submit
-
-lockForm(form2);//Disables Form 2's input and button
-form2Locked=true;//Marks Form2 as locked
-  updateStatus();//Refreshes the status display and final button state.
-  });//if statement ends here
-
-finalSubmit.addEventListener('click',()=>{//listens for a click on the final submit button.
-  document.getElementById('post-f1-name').value=document.getElementById('f1-name').value; //Copies Form 1 name into hidden field.
-  
-  document.getElementById('post-f1-email').value=document.getElementById('f1-email').value;
-  //Copies Form1 email into hidden field.
-  
-  document.getElementById('post-Message').value=document.getElementById('f2-message').value;
-  //Copies Form2 message into hidden field.
-  
-  finalSubmit.disabled=true;//Disables the final Submit button to prevent double submission
-  status.textContent='Submitted';
-  //Updating Status to show Completion
-  
-  document.getElementById('postForm').submit();
-  //Submit the hidden form via POST to the action URL, sending all answers.
-});
-
-
-
-//I want to add my Sidebar JavaScript here
-function openNav(){//Function that opens my Sidebar
-  document.getElementById("mySidenav").style.width="100%";
-  //Expands the sidenav to fill the full width of the screen
-}
-
-
-function closeNav(){//Function that closes the sidenav
-document.getElementById('mySidenav').style.width='0';
-  //Shrinks the sidenav width to zero
-}
-
-function showPage(pageId){//function that switches which page section is visible; pageId is the Id of the div to show
-document.querySelectorAll('.pages').forEach(
-  p=>p.classList.remove('active'));
-  //loops through every page section and remove the 'active' class, hiding them all.
-  document.getElementById(pageId).classList.add('active');
-  //adds the "active" class to the requested page, making it visible.
-  document.querySelectorAll('.navbtn').forEach(
-    b=>b.classList.remove('active'));
-  //loops through every nav button and removes the 'active' class.
-  const activeBtn=document.querySelector(`.navbtn[data-page="${pageId}"]`);
-  //Finds the nav button whose data-page attribute matches the page being shown
-  if (activeBtn)activeBtn.classList.add('active');
-  //If a matching button existing (i.e. not the homepage), highlight it as active.
-  
-  const backBtn=document.getElementById('backBtn');
-  //Reference to the back button Element
-  //adding my openBtnBar
-  const openBtnBar=document.getElementById('openBtnBar');
-  //closing it after adding
-  
-if(pageId==='home'){
-  //If we're navigating to the home page
-  backBtn.classList.remove('show');
-  //the begining of the openBtnBar
-  openBtnBar.style.display='inline-block';
-  //close the openBtnBar
-  
-  //Hides the back button, since there's nowhere to go back from home
-}else{
-  //otherwise we're on a sub-page
-  backBtn.classList.add('show');
-  //show the back button so that I  can return home.
-  
-  //starting the openBtnBar
-  openBtnBar.style.display='none';
-  //ending the openBtnBar
-}
-closeNav();
-//This closes the sidenav automatically after a page is selected 
-}
-//I want to close my Sidebar JavaScript.
-
-    //Javascript ends here
+    refresh();
   </script>
-</body><!--This is where the codes will end-->
-
+</body>
 </html>
